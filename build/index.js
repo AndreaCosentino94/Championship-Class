@@ -1,0 +1,23 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var player_1 = require("./player");
+var team_1 = require("./team");
+var championship_1 = require("./championship");
+var firstPlayer = new player_1.Player('Ugo', 'Tognazzi', 26, 41000);
+var secondPlayer = new player_1.Player('Ciccio', 'Pasticcio', 36, 25000);
+var thirdPlayer = new player_1.Player('Mauro', 'Mauri', 16, 23000);
+var fourthPlayer = new player_1.Player('Pino', 'Silvestri', 23, 12000);
+var aTeam = new team_1.Team('A-Team', [firstPlayer, secondPlayer, thirdPlayer], 25000);
+var firsChamp = new championship_1.Championship('Uefa', [aTeam]);
+//console.log(firsChamp);
+var playerNumber = firsChamp.getAllPlayersByNumber(36);
+//console.log(playerNumber);
+var playerName = firsChamp.getAllPlayersByName('Mauro');
+//console.log(playerName);
+var valueTeam = aTeam.getTotalValue();
+console.log(valueTeam);
+var totBudget = aTeam.getTotalBudget();
+console.log(totBudget);
+var sortTeamByValue = aTeam.getPlayerSortByValue();
+console.log(sortTeamByValue);
+//npm run start ===> FOR RUN THE CODE!
